@@ -3,46 +3,129 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>İlgi Alanlarım</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e5e5e5;
+            margin: 0;
+        }
+
+        .kutu {
+            width: 800px;
+            margin: 25px auto;
+            background-color: white;
+            border: 2px solid #666;
+        }
+
+        .navigasyon {
+            background-color: #f0c090;
+            text-align: center;
+            padding: 12px;
+            border-bottom: 2px solid #cc7722;
+        }
+
+        .navigasyon a {
+            text-decoration: none;
+            color: black;
+            font-size: 15px;
+            margin-right: 18px;
+            font-weight: bold;
+        }
+
+        .navigasyon a:hover {
+            background-color: #cc7722;
+            color: white;
+            padding: 4px;
+        }
+
+        .sayfa-basligi {
+            padding: 20px;
+            background-color: #faf5f0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .sayfa-basligi h1 {
+            color: #8B4513;
+        }
+
+        .sayfa-basligi p {
+            color: #777;
+        }
+
+        .liste-alani {
+            padding: 20px;
+        }
+
+        .liste-alani h2 {
+            color: #8B4513;
+            border-bottom: 1px dashed #ccc;
+            padding-bottom: 5px;
+        }
+
+        .liste-alani ul {
+            margin-left: 20px;
+        }
+
+        .liste-alani li {
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+
+        .geri-link {
+            padding: 10px 20px;
+        }
+
+        .geri-link a {
+            color: #8B4513;
+        }
+
+        .en-alt {
+            background-color: #444;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 
 <body>
-    <header>
-        <h1>İlgi Alanlarım</h1>
-        <p>Teknoloji ve kişisel ilgi alanlarım</p>
-    </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Ana Sayfa</a></li>
-            <li><a href="about.html">Hakkımda</a></li>
-            <li><a href="interests.html">İlgi Alanlarım</a></li>
-            <li><a href="contact.html">İletişim</a></li>
-            <li><a href="css-odev.html">CSS Ödev</a></li>
-        </ul>
-    </nav>
+    <div class="kutu">
 
-    <hr>
+        <div class="navigasyon">
+            <a href="index.html">Ana Sayfa</a>
+            <a href="about.html">Hakkımda</a>
+            <a href="interests.html">İlgi Alanlarım</a>
+            <a href="contact.html">İletişim</a>
+            <a href="css-odev.html">CSS Ödev</a>
+        </div>
 
-    <main>
-        <section>
+        <div class="sayfa-basligi">
+            <h1>İlgi Alanlarım</h1>
+            <p>Teknoloji ve kişisel ilgi alanlarım</p>
+        </div>
+
+        <div class="liste-alani">
             <h2>İlgi Alanlarım</h2>
             <ul>
                 <li>Oyun oynamak</li>
                 <li>Film, dizi izlemek</li>
                 <li>Uygulama geliştirmek</li>
             </ul>
-        </section>
+        </div>
 
-        <p><a href="index.html">&larr; Ana sayfaya geri dön</a></p>
-    </main>
+        <div class="geri-link">
+            <p><a href="index.html">&larr; Ana sayfaya geri dön</a></p>
+        </div>
 
-    <hr>
+        <div class="en-alt">
+            <p>&copy; 2026 Muhammed Emin Dinç | Web Programlama Dersi</p>
+        </div>
 
-    <footer>
-        <p>&copy; 2026 Muhammed Emin Dinç | Web Programlama Dersi</p>
-    </footer>
+    </div>
+
 </body>
 
 </html>

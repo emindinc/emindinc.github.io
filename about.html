@@ -3,67 +3,151 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hakkımda</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0e0e0;
+            margin: 0;
+        }
+
+        .ana-sayfa {
+            width: 800px;
+            margin: 25px auto;
+            background-color: white;
+            border: 2px solid #555;
+        }
+
+        .menu-bar {
+            background-color: #a8d5a2;
+            text-align: center;
+            padding: 12px;
+            border-bottom: 2px solid green;
+        }
+
+        .menu-bar a {
+            text-decoration: none;
+            color: black;
+            font-size: 15px;
+            margin-right: 18px;
+            font-weight: bold;
+        }
+
+        .menu-bar a:hover {
+            background-color: green;
+            color: white;
+            padding: 4px;
+        }
+
+        .ust-baslik {
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .ust-baslik h1 {
+            color: #2e7d32;
+        }
+
+        .ust-baslik p {
+            color: #777;
+        }
+
+        .bilgi-alani {
+            padding: 20px;
+        }
+
+        .bilgi-alani h2 {
+            color: #2e7d32;
+            border-bottom: 1px dashed #bbb;
+            padding-bottom: 5px;
+        }
+
+        .bilgi-alani ul,
+        .bilgi-alani ol {
+            margin-left: 20px;
+        }
+
+        .bilgi-alani li {
+            margin-bottom: 5px;
+        }
+
+        .bilgi-alani blockquote {
+            background-color: #f9f9f9;
+            border-left: 3px solid green;
+            padding: 10px;
+            margin: 10px 0;
+            color: #555;
+        }
+
+        .geri-don {
+            padding: 10px 20px;
+        }
+
+        .geri-don a {
+            color: #2e7d32;
+        }
+
+        .footer-kismi {
+            background-color: #444;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 
 <body>
-    <header>
-        <h1>Hakkımda</h1>
-        <p>Kendimi ve hedeflerimi tanıttığım sayfa</p>
-    </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Ana Sayfa</a></li>
-            <li><a href="about.html">Hakkımda</a></li>
-            <li><a href="interests.html">İlgi Alanlarım</a></li>
-            <li><a href="contact.html">İletişim</a></li>
-            <li><a href="css-odev.html">CSS Ödev</a></li>
-        </ul>
-    </nav>
+    <div class="ana-sayfa">
 
-    <hr>
+        <div class="menu-bar">
+            <a href="index.html">Ana Sayfa</a>
+            <a href="about.html">Hakkımda</a>
+            <a href="interests.html">İlgi Alanlarım</a>
+            <a href="contact.html">İletişim</a>
+            <a href="css-odev.html">CSS Ödev</a>
+        </div>
 
-    <main>
-        <section>
+        <div class="ust-baslik">
+            <h1>Hakkımda</h1>
+            <p>Kendimi ve hedeflerimi tanıttığım sayfa</p>
+        </div>
+
+        <div class="bilgi-alani">
             <h2>Ben Kimim?</h2>
-            <p>Merhaba Muhammed Emin Dinç, Bilgisayar Mühendisliği öğrencisiyim.
-            </p>
-        </section>
+            <p>Merhaba Muhammed Emin Dinç, Bilgisayar Mühendisliği öğrencisiyim.</p>
 
-        <section>
             <h2>Eğitim Bilgilerim</h2>
             <ul>
                 <li>Marmara Üniversitesi</li>
                 <li>Bilgisayar Mühendisliği</li>
                 <li>Web Programlama dersi</li>
             </ul>
-        </section>
 
-        <section>
             <h2>Motivasyonum</h2>
             <blockquote>
                 Yeni şeyler öğrenmek ve dersten tam verim almak.
             </blockquote>
-        </section>
 
-        <section>
             <h2>Hedeflerim</h2>
             <ol>
                 <li>Dersi öğrenerek geçmek</li>
                 <li>Kendime bir şeyler katmak</li>
             </ol>
-        </section>
+        </div>
 
-        <p><a href="index.html">&larr; Ana sayfaya geri dön</a></p>
-    </main>
+        <div class="geri-don">
+            <p><a href="index.html">&larr; Ana sayfaya geri dön</a></p>
+        </div>
 
-    <hr>
+        <div class="footer-kismi">
+            <p>&copy; 2026 Muhammed Emin Dinç | Web Programlama Dersi</p>
+        </div>
 
-    <footer>
-        <p>&copy; 2026 Muhammed Emin Dinç | Web Programlama Dersi</p>
-    </footer>
+    </div>
+
 </body>
 
 </html>

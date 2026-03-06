@@ -3,58 +3,128 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>İletişim - Kişisel Portfolyo</title>
+    <title>İletişim</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e2e2e2;
+            margin: 0;
+        }
+
+        .sayfa {
+            width: 800px;
+            margin: 25px auto;
+            background-color: white;
+            border: 2px solid #555;
+        }
+
+        .menu-alani {
+            background-color: #d4b0e0;
+            text-align: center;
+            padding: 12px;
+            border-bottom: 2px solid #7b2d8e;
+        }
+
+        .menu-alani a {
+            text-decoration: none;
+            color: black;
+            font-size: 15px;
+            margin-right: 18px;
+            font-weight: bold;
+        }
+
+        .menu-alani a:hover {
+            background-color: #7b2d8e;
+            color: white;
+            padding: 4px;
+        }
+
+        .ust-alan {
+            padding: 20px;
+            background-color: #f8f4fa;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .ust-alan h1 {
+            color: #5b1070;
+        }
+
+        .ust-alan p {
+            color: #777;
+        }
+
+        .iletisim-bilgi {
+            padding: 20px;
+        }
+
+        .iletisim-bilgi h2 {
+            color: #5b1070;
+            border-bottom: 1px dashed #ccc;
+            padding-bottom: 5px;
+        }
+
+        .iletisim-bilgi a {
+            color: #7b2d8e;
+        }
+
+        .iletisim-bilgi ul {
+            margin-left: 20px;
+        }
+
+        .iletisim-bilgi li {
+            margin-bottom: 6px;
+        }
+
+        .alt-alan {
+            background-color: #444;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 15px;
+        }
+    </style>
 </head>
 
 <body>
-    <header>
-        <h1>Emin'in Kişisel Sitesi</h1>
-        <p>Web Programlama Dersi</p>
-    </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Ana Sayfa</a></li>
-            <li><a href="about.html">Hakkımda</a></li>
-            <li><a href="interests.html">İlgi Alanlarım</a></li>
-            <li><a href="contact.html">İletişim</a></li>
-            <li><a href="css-odev.html">CSS Ödev</a></li>
-        </ul>
-    </nav>
+    <div class="sayfa">
 
-    <hr>
+        <div class="menu-alani">
+            <a href="index.html">Ana Sayfa</a>
+            <a href="about.html">Hakkımda</a>
+            <a href="interests.html">İlgi Alanlarım</a>
+            <a href="contact.html">İletişim</a>
+            <a href="css-odev.html">CSS Ödev</a>
+        </div>
 
-    <main>
-        <section>
+        <div class="ust-alan">
+            <h1>İletişim</h1>
+            <p>Web Programlama Dersi</p>
+        </div>
+
+        <div class="iletisim-bilgi">
             <h2>İletişim</h2>
             <p>Benimle iletişime geçmek için aşağıdaki kanalları kullanabilirsiniz.</p>
-        </section>
 
-        <section>
             <h2>E-posta</h2>
             <p>E-posta: <a href="mailto:emindinc@marun.edu.tr">emindinc@marun.edu.tr</a></p>
-        </section>
 
-        <section>
             <h2>Sosyal Medya Bağlantıları</h2>
             <ul>
                 <li>🔗 <a href="https://github.com/emindinc" target="_blank">GitHub</a></li>
                 <li>🔗 <a href="https://www.linkedin.com/in/muhammed-emin-dinc/" target="_blank">LinkedIn</a></li>
             </ul>
-        </section>
 
-        <section>
             <h2>Konum</h2>
-            <p> İstanbul, Türkiye</p>
-        </section>
-    </main>
+            <p>İstanbul, Türkiye</p>
+        </div>
 
-    <hr>
+        <div class="alt-alan">
+            <p>&copy; 2026 Muhammed Emin Dinç - Web Programlama Dersi</p>
+        </div>
 
-    <footer>
-        <p>&copy; 2025 Muhammed Emin Dinç - Web Programlama Dersi Ödevi</p>
-    </footer>
+    </div>
+
 </body>
 
 </html>

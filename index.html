@@ -3,46 +3,115 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muhammed Emin Dinç - Ana Sayfa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #dcdcdc;
+            margin: 0;
+        }
+
+        .sayfa-kutusu {
+            width: 800px;
+            margin: 25px auto;
+            background-color: white;
+            border: 2px solid #444;
+        }
+
+        .ust-menu {
+            background-color: #b0d4f1;
+            text-align: center;
+            padding: 12px;
+            border-bottom: 2px solid #336699;
+        }
+
+        .ust-menu a {
+            text-decoration: none;
+            color: black;
+            font-size: 15px;
+            margin-right: 18px;
+            font-weight: bold;
+        }
+
+        .ust-menu a:hover {
+            background-color: #336699;
+            color: white;
+            padding: 4px;
+        }
+
+        .baslik {
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .baslik h1 {
+            color: #333;
+        }
+
+        .baslik p {
+            color: #666;
+        }
+
+        .icerik {
+            padding: 20px;
+        }
+
+        .icerik h2 {
+            color: #336699;
+            border-bottom: 1px dashed #aaa;
+            padding-bottom: 5px;
+        }
+
+        .icerik ul,
+        .icerik ol {
+            margin-left: 20px;
+        }
+
+        .icerik li {
+            margin-bottom: 5px;
+        }
+
+        .alt-kisim {
+            background-color: #444;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 15px;
+        }
+    </style>
 </head>
 
 <body>
-    <header>
-        <h1>Muhammed Emin Dinç</h1>
-        <p>Bilgisayar Mühendisliği | Web Programlama Öğrencisi</p>
-    </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Ana Sayfa</a></li>
-            <li><a href="about.html">Hakkımda</a></li>
-            <li><a href="interests.html">İlgi Alanlarım</a></li>
-            <li><a href="contact.html">İletişim</a></li>
-            <li><a href="css-odev.html">CSS Ödev</a></li>
-        </ul>
-    </nav>
+    <div class="sayfa-kutusu">
 
-    <hr>
+        <div class="ust-menu">
+            <a href="index.html">Ana Sayfa</a>
+            <a href="about.html">Hakkımda</a>
+            <a href="interests.html">İlgi Alanlarım</a>
+            <a href="contact.html">İletişim</a>
+            <a href="css-odev.html">CSS Ödev</a>
+        </div>
 
-    <main>
-        <section>
+        <div class="baslik">
+            <h1>Muhammed Emin Dinç</h1>
+            <p>Bilgisayar Mühendisliği | Web Programlama Öğrencisi</p>
+        </div>
+
+        <div class="icerik">
             <h2>Hoş Geldiniz</h2>
             <p>Bu web sitesi, Web Programlama dersi kapsamında hazırlanmış örnek bir kişisel tanıtım sayfasıdır.
                 Amaç, HTML'in temel etiketlerini ve sayfa yapısını öğrenmektir.</p>
             <p>Daha fazla bilgi için Hakkımda sayfasını ziyaret edebilirsiniz.</p>
-        </section>
 
-        <section>
             <h2>Hızlı Bilgiler</h2>
             <ul>
                 <li>Üniversite: Marmara Üniversitesi</li>
                 <li>Bölüm: Bilgisayar Mühendisliği</li>
                 <li>İlgi Alanı: Web Teknolojileri</li>
             </ul>
-        </section>
 
-        <section>
             <h2>Öğrenme Hedeflerim</h2>
             <ol>
                 <li>HTML temellerini öğrenmek</li>
@@ -50,14 +119,14 @@
                 <li>JavaScript ile etkileşim eklemek</li>
                 <li>ASP.NET Core ile dinamik site geliştirmek</li>
             </ol>
-        </section>
-    </main>
+        </div>
 
-    <hr>
+        <div class="alt-kisim">
+            <p>&copy; 2026 Muhammed Emin Dinç | Web Programlama Dersi</p>
+        </div>
 
-    <footer>
-        <p>&copy; 2026 Muhammed Emin Dinç | Web Programlama Dersi</p>
-    </footer>
+    </div>
+
 </body>
 
 </html>
