@@ -78,6 +78,69 @@
             color: #555;
         }
 
+        /* İletişim Formu Stilleri */
+        .contact-container {
+            width: 55%;
+            margin: 20px auto;
+            padding: 25px;
+            border: 2px solid #a8d5a2;
+            border-radius: 8px;
+            background-color: #fafffe;
+        }
+
+        .contact-container h2 {
+            color: #2e7d32;
+            border-bottom: 1px dashed #bbb;
+            padding-bottom: 5px;
+            margin-top: 0;
+        }
+
+        .contact-container label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 4px;
+            color: #333;
+        }
+
+        .contact-container input,
+        .contact-container select,
+        .contact-container textarea {
+            width: 100%;
+            padding: 8px 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+
+        .contact-container input:focus,
+        .contact-container select:focus,
+        .contact-container textarea:focus {
+            outline: none;
+            border-color: #2e7d32;
+        }
+
+        .contact-container textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .contact-container button[type="submit"] {
+            background-color: #2e7d32;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 30px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .contact-container button[type="submit"]:hover {
+            background-color: #1b5e20;
+        }
+
         .geri-don {
             padding: 10px 20px;
         }
@@ -133,6 +196,31 @@
                 <li>Dersi öğrenerek geçmek</li>
                 <li>Kendime bir şeyler katmak</li>
             </ol>
+        </div>
+
+        <!-- İletişim Formu -->
+        <div class="contact-container">
+            <h2>İletişim Formu</h2>
+            <form>
+                <label for="adSoyad">Ad Soyad:</label>
+                <input type="text" id="adSoyad" name="adSoyad" placeholder="Adınızı ve soyadınızı girin">
+
+                <label for="eposta">E-posta:</label>
+                <input type="email" id="eposta" name="eposta" placeholder="ornek@mail.com">
+
+                <label for="konu">Konu:</label>
+                <select id="konu" name="konu">
+                    <option value="" disabled selected>Bir konu seçin</option>
+                    <option value="is-teklifi">İş Teklifi</option>
+                    <option value="soru">Soru</option>
+                    <option value="geri-bildirim">Geri Bildirim</option>
+                </select>
+
+                <label for="mesaj">Mesaj:</label>
+                <textarea id="mesaj" name="mesaj" placeholder="Mesajınızı buraya yazın..."></textarea>
+
+                <button type="submit">Gönder</button>
+            </form>
         </div>
 
         <div class="geri-don">
