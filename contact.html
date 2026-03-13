@@ -118,6 +118,17 @@
             font-size: 14px;
         }
 
+        .contact-container input[type="radio"],
+        .contact-container input[type="checkbox"] {
+            width: auto;
+            margin-bottom: 0;
+            margin-right: 5px;
+        }
+
+        .contact-container input[type="file"] {
+            padding: 4px;
+        }
+
         .contact-container input:focus,
         .contact-container select:focus,
         .contact-container textarea:focus {
@@ -125,9 +136,31 @@
             border-color: #7b2d8e;
         }
 
+        .contact-container fieldset {
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 10px 15px;
+            margin-bottom: 15px;
+        }
+
+        .contact-container fieldset legend {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .contact-container fieldset label {
+            font-weight: normal;
+            margin-bottom: 6px;
+        }
+
         .contact-container textarea {
             resize: vertical;
             min-height: 100px;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
         }
 
         .contact-container button[type="submit"] {
@@ -142,6 +175,20 @@
 
         .contact-container button[type="submit"]:hover {
             background-color: #5b1070;
+        }
+
+        .contact-container button[type="reset"] {
+            background-color: #c0392b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 30px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .contact-container button[type="reset"]:hover {
+            background-color: #a93226;
         }
     </style>
 </head>
@@ -184,23 +231,46 @@
             <h2>İletişim Formu</h2>
             <form>
                 <label for="adSoyad">Ad Soyad:</label>
-                <input type="text" id="adSoyad" name="adSoyad" placeholder="Adınızı ve soyadınızı girin">
+                <input type="text" id="adSoyad" name="adSoyad" placeholder="Örn: Arif Karadaş">
 
-                <label for="eposta">E-posta:</label>
+                <label for="eposta">E-posta Adresi:</label>
                 <input type="email" id="eposta" name="eposta" placeholder="ornek@mail.com">
+
+                <label for="sifre">Başvuru Takip Şifresi:</label>
+                <input type="password" id="sifre" name="sifre" placeholder="Şifrenizi girin">
+
+                <fieldset>
+                    <legend>İletişim Tercihi:</legend>
+                    <label><input type="radio" name="iletisimTercihi" value="eposta" checked> Bana e-posta ile
+                        ulaşın</label>
+                    <label><input type="radio" name="iletisimTercihi" value="telefon"> Bana telefonla ulaşın</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>İlgi Alanları / Yetenekler:</legend>
+                    <label><input type="checkbox" name="yetenekler" value="html"> HTML</label>
+                    <label><input type="checkbox" name="yetenekler" value="css"> CSS</label>
+                    <label><input type="checkbox" name="yetenekler" value="algoritma"> Algoritma</label>
+                </fieldset>
 
                 <label for="konu">Konu:</label>
                 <select id="konu" name="konu">
-                    <option value="" disabled selected>Bir konu seçin</option>
+                    <option value="" disabled selected>Lütfen bir konu seçin...</option>
                     <option value="is-teklifi">İş Teklifi</option>
                     <option value="soru">Soru</option>
                     <option value="geri-bildirim">Geri Bildirim</option>
                 </select>
 
-                <label for="mesaj">Mesaj:</label>
-                <textarea id="mesaj" name="mesaj" placeholder="Mesajınızı buraya yazın..."></textarea>
+                <label for="dosya">Özgeçmiş (CV) veya Fotoğraf Yükle:</label>
+                <input type="file" id="dosya" name="dosya">
 
-                <button type="submit">Gönder</button>
+                <label for="mesaj">Mesajınız:</label>
+                <textarea id="mesaj" name="mesaj" placeholder="Detaylı mesajınızı buraya yazabilirsiniz..."></textarea>
+
+                <div class="button-group">
+                    <button type="submit">Gönder</button>
+                    <button type="reset">Temizle</button>
+                </div>
             </form>
         </div>
 
