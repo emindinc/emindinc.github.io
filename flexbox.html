@@ -13,13 +13,22 @@
 
         body {
             font-family: Arial, sans-serif;
+            background-color: #e3e3e3;
+            margin: 0;
+        }
+
+        .sayfa-kutusu {
+            width: 800px;
+            margin: 25px auto;
+            background-color: white;
+            border: 2px solid #555;
         }
 
         /* Ana kapsayici - 100vh */
         .wrapper {
             display: flex;
             flex-direction: column;
-            height: 100vh;
+            min-height: 100vh;
         }
 
         /* 1) Navbar - 10vh */
@@ -262,6 +271,7 @@
 
 <body>
 
+    <div class="sayfa-kutusu">
     <div class="wrapper">
 
         <!-- 1) Navbar -->
@@ -349,6 +359,7 @@
             <p>&copy; 2026 Muhammed Emin Dinç | Web Programlama Dersi</p>
         </div>
 
+    </div>
     </div>
 
 </body>
