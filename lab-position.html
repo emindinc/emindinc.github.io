@@ -6,110 +6,83 @@
     <title>CSS Position Lab - Muhammed Emin Dinç</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #1a1a2e;
+            font-family: Arial, sans-serif;
+            background-color: #dcdcdc;
             margin: 0;
             padding: 0;
             min-height: 200vh;
             min-width: 650px;
         }
 
-        .sabit-buton-sol {
-            position: fixed;
-            top: 16px;
-            left: 16px;
-            background-color: #e94560;
-            color: white;
-            padding: 9px 18px;
-            border-radius: 6px;
-            font-size: 13px;
-            font-weight: bold;
+        .ust-menu {
+            background-color: #b0d4f1;
+            text-align: center;
+            padding: 12px;
+            border-bottom: 2px solid #336699;
+        }
+
+        .ust-menu a {
             text-decoration: none;
-            z-index: 1000;
-            transition: background-color 0.3s ease, transform 0.2s ease;
+            color: black;
+            font-size: 15px;
+            margin-right: 18px;
+            font-weight: bold;
             cursor: pointer;
+            transition: background-color 0.3s ease;
         }
 
-        .sabit-buton-sol:hover {
-            background-color: #c73550;
-            transform: translateY(-2px);
-        }
-
-        .sabit-buton-sol:active {
-            transform: translateY(1px);
+        .ust-menu a:hover {
+            background-color: #9ac0e6;
         }
 
         .sabit-buton-sag {
             position: fixed;
             bottom: 20px;
             right: 20px;
-            background-color: #0f3460;
-            color: #e8e8e8;
-            padding: 10px 22px;
+            background-color: #336699;
+            color: white;
+            padding: 10px 20px;
             border-radius: 6px;
             font-size: 13px;
             font-weight: bold;
             text-decoration: none;
             z-index: 1000;
             cursor: pointer;
-            transition: background-color 0.3s ease, color 0.3s ease;
+            transition: background-color 0.3s ease;
         }
 
         .sabit-buton-sag:hover {
-            background-color: #16213e;
-            color: #e94560;
+            background-color: #264d73;
         }
 
         .baslik-alani {
             text-align: center;
-            padding: 70px 20px 10px 20px;
+            padding: 30px 20px 10px 20px;
         }
 
         .baslik-alani h2 {
-            color: #aaa;
-            font-size: 16px;
+            color: #444;
+            font-size: 17px;
             font-weight: normal;
-            letter-spacing: 1px;
             margin: 0;
         }
 
         .kart-kapsayici {
             position: relative;
             width: 540px;
-            margin: 25px auto 40px auto;
-            background: linear-gradient(160deg, #16213e 0%, #0f3460 60%, #1a1a40 100%);
-            border-radius: 14px;
-            border: 1px solid #2a2a5a;
-            padding: 55px 35px 55px 35px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
-            min-height: 260px;
+            margin: 20px auto 30px auto;
+            background-color: #f5f5f5;
+            border: 2px solid #336699;
+            border-radius: 10px;
+            padding: 50px 30px 60px 30px;
+            min-height: 240px;
         }
 
         .tarih-etiketi {
             position: absolute;
-            top: 16px;
-            right: 16px;
-            background-color: #533483;
-            color: #e0d0f0;
-            padding: 5px 12px;
-            border-radius: 4px;
-            font-size: 12px;
-            font-weight: bold;
-            z-index: 3;
-            cursor: pointer;
-            transition: background-color 0.25s ease, transform 0.2s ease;
-        }
-
-        .tarih-etiketi:hover {
-            background-color: #6a42a0;
-            transform: scale(1.05);
-        }
-
-        .kategori-rozeti {
-            position: absolute;
-            top: 16px;
-            left: 16px;
-            background-color: #e94560;
+            top: 14px;
+            right: 14px;
+            background-color: #336699;
             color: white;
             padding: 5px 12px;
             border-radius: 4px;
@@ -117,39 +90,56 @@
             font-weight: bold;
             z-index: 3;
             cursor: pointer;
-            transition: background-color 0.25s ease, transform 0.2s ease;
+            transition: background-color 0.25s ease;
+        }
+
+        .tarih-etiketi:hover {
+            background-color: #264d73;
+        }
+
+        .kategori-rozeti {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            background-color: #5cb85c;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            z-index: 3;
+            cursor: pointer;
+            transition: background-color 0.25s ease;
         }
 
         .kategori-rozeti:hover {
-            background-color: #ff6b81;
-            transform: scale(1.05);
+            background-color: #449d44;
         }
 
         .konum-kutusu {
             position: absolute;
-            bottom: 65px;
-            right: 35px;
-            background-color: rgba(255, 255, 255, 0.08);
-            color: #ccc;
-            padding: 8px 16px;
-            border-radius: 6px;
-            border: 1px solid rgba(255, 255, 255, 0.12);
+            bottom: 55px;
+            right: 30px;
+            background-color: white;
+            color: #555;
+            padding: 8px 14px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
             font-size: 12px;
             z-index: 3;
             cursor: default;
-            transition: background-color 0.3s ease, border-color 0.3s ease;
+            transition: border-color 0.3s ease;
         }
 
         .konum-kutusu:hover {
-            background-color: rgba(255, 255, 255, 0.15);
-            border-color: rgba(233, 69, 96, 0.4);
+            border-color: #336699;
         }
 
         .kayit-butonu {
             position: absolute;
-            bottom: 18px;
-            right: 16px;
-            background-color: #e94560;
+            bottom: 14px;
+            right: 14px;
+            background-color: #d9534f;
             color: white;
             padding: 7px 16px;
             border-radius: 4px;
@@ -157,60 +147,66 @@
             font-weight: bold;
             z-index: 3;
             cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease;
+            transition: background-color 0.3s ease;
             animation: vurgula 2s ease-in-out infinite;
         }
 
         .kayit-butonu:hover {
-            background-color: #ff6b81;
-            transform: translateY(-2px);
+            background-color: #c9302c;
         }
 
         .kayit-butonu:active {
-            transform: translateY(1px);
-            background-color: #c73550;
+            background-color: #a02622;
         }
 
         .kart-baslik {
-            font-size: 24px;
-            color: #eee;
-            margin: 8px 0 12px 0;
+            font-size: 22px;
+            color: #333;
+            margin: 5px 0 10px 0;
             font-weight: bold;
         }
 
         .kart-aciklama {
             font-size: 14px;
-            color: #999;
+            color: #666;
             line-height: 1.7;
-            max-width: 360px;
+            max-width: 350px;
         }
 
         @keyframes vurgula {
             0% {
-                box-shadow: 0 0 0 0 rgba(233, 69, 96, 0.6);
+                box-shadow: 0 0 0 0 rgba(217, 83, 79, 0.5);
             }
 
             50% {
-                box-shadow: 0 0 18px 10px rgba(233, 69, 96, 0.45);
+                box-shadow: 0 0 14px 8px rgba(217, 83, 79, 0.35);
             }
 
             100% {
-                box-shadow: 0 0 0 0 rgba(233, 69, 96, 0.6);
+                box-shadow: 0 0 0 0 rgba(217, 83, 79, 0.5);
             }
         }
 
         .alt-bilgi {
+            background-color: #444;
+            color: white;
             text-align: center;
-            padding: 30px 20px;
-            color: #555;
-            font-size: 12px;
+            padding: 10px;
+            font-size: 13px;
         }
     </style>
 </head>
 
 <body>
 
-    <a href="index.html" class="sabit-buton-sol">Ana Sayfaya Dön</a>
+    <div class="ust-menu">
+        <a href="index.html">Ana Sayfa</a>
+        <a href="about.html">Hakkımda</a>
+        <a href="interests.html">İlgi Alanlarım</a>
+        <a href="contact.html">İletişim</a>
+        <a href="flexbox.html">Flexbox</a>
+        <a href="lab-position.html">Lab Position</a>
+    </div>
 
     <a href="#" class="sabit-buton-sag">Yardımcı Menü</a>
 
@@ -223,8 +219,6 @@
         <div class="kategori-rozeti">Ücretsiz</div>
 
         <div class="tarih-etiketi">22 Nisan</div>
-
-
 
         <h1 class="kart-baslik">Yapay Zeka Zirvesi</h1>
         <p class="kart-aciklama">
