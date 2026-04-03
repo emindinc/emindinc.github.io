@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Position Lab - Muhammed Emin Dinç</title>
+    <style>
+        /* ===== GENEL AYARLAR ===== */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e8edf2;
+            margin: 0;
+            padding: 0;
+            min-height: 200vh;
+        }
+
+        /* ===== FIXED: Ana Sayfaya Dön Butonu (sol üst) ===== */
+        .sabit-buton-sol {
+            position: fixed;
+            top: 18px;
+            left: 18px;
+            background-color: #336699;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 22px;
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: none;
+            z-index: 1000;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .sabit-buton-sol:hover {
+            background-color: #264d73;
+            transform: scale(1.08);
+        }
+
+        /* ===== FIXED: Yardım Butonu (sağ alt) ===== */
+        .sabit-buton-sag {
+            position: fixed;
+            bottom: 22px;
+            right: 22px;
+            background-color: #7b4fbf;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 22px;
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: none;
+            z-index: 1000;
+            cursor: pointer;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .sabit-buton-sag:hover {
+            background-color: #5e3a91;
+            box-shadow: 0 4px 16px rgba(123, 79, 191, 0.45);
+        }
+
+        /* ===== BAŞLIK ALANI ===== */
+        .baslik-alani {
+            text-align: center;
+            padding: 80px 20px 20px 20px;
+        }
+
+        .baslik-alani h2 {
+            color: #444;
+            font-size: 18px;
+            font-weight: normal;
+            margin: 0;
+        }
+
+        /* ===== KART KAPSAYICI (RELATIVE) ===== */
+        .kart-kapsayici {
+            position: relative;
+            width: 560px;
+            margin: 30px auto 40px auto;
+            background: linear-gradient(135deg, #c7d8f7 0%, #dfc7f7 50%, #e8d0f0 100%);
+            border-radius: 18px;
+            padding: 60px 40px 50px 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.10);
+            min-height: 280px;
+        }
+
+        /* ===== ABSOLUTE ÖĞE 1: Tarih Etiketi (sağ üst) ===== */
+        .tarih-etiketi {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #d4f5e9;
+            color: #2a6b4f;
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: bold;
+            z-index: 3;
+            cursor: pointer;
+            transition: transform 0.25s ease, background-color 0.25s ease;
+        }
+
+        .tarih-etiketi:hover {
+            transform: translateY(-3px);
+            background-color: #a8ebd0;
+        }
+
+        /* ===== ABSOLUTE ÖĞE 2: Kategori Rozeti (sol üst) ===== */
+        .kategori-rozeti {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #fef3c7;
+            color: #92650a;
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: bold;
+            z-index: 3;
+            cursor: pointer;
+            transition: transform 0.25s ease, background-color 0.25s ease;
+        }
+
+        .kategori-rozeti:hover {
+            transform: translateY(-3px);
+            background-color: #fde68a;
+        }
+
+        /* ===== ABSOLUTE ÖĞE 3: Konum Kutusu (ortada aşağı) ===== */
+        .konum-kutusu {
+            position: absolute;
+            bottom: 70px;
+            right: 50px;
+            background-color: rgba(255, 255, 255, 0.92);
+            color: #444;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-size: 13px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            z-index: 3;
+            cursor: default;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .konum-kutusu:hover {
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+        }
+
+        /* ===== ABSOLUTE ÖĞE 4: Kayıt Butonu (sağ alt) ===== */
+        .kayit-butonu {
+            position: absolute;
+            bottom: 18px;
+            right: 20px;
+            background-color: #ef6c6c;
+            color: white;
+            padding: 8px 18px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: bold;
+            z-index: 3;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .kayit-butonu:hover {
+            background-color: #d94c4c;
+            transform: scale(1.06);
+        }
+
+        /* ===== KART İÇERİK ===== */
+        .kart-baslik {
+            font-size: 26px;
+            color: #222;
+            margin: 10px 0 14px 0;
+            font-weight: bold;
+        }
+
+        .kart-aciklama {
+            font-size: 15px;
+            color: #444;
+            line-height: 1.7;
+            max-width: 380px;
+        }
+
+        /* ===== DEKORATİF DAİRE (z-index ile arkada) ===== */
+        .dekor-daire {
+            position: absolute;
+            width: 130px;
+            height: 130px;
+            background: rgba(200, 180, 240, 0.35);
+            border-radius: 50%;
+            bottom: 60px;
+            right: 120px;
+            z-index: 1;
+            animation: yuzme 4s ease-in-out infinite;
+        }
+
+        .dekor-daire-2 {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            background: rgba(160, 200, 255, 0.30);
+            border-radius: 50%;
+            top: 50px;
+            right: 100px;
+            z-index: 1;
+            animation: yuzme 3s ease-in-out infinite 1s;
+        }
+
+        /* ===== @KEYFRAMES ANİMASYON ===== */
+        @keyframes yuzme {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-12px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        /* ===== :ACTIVE ETKİLEŞİMİ ===== */
+        .kayit-butonu:active {
+            transform: scale(0.95);
+            background-color: #b83a3a;
+        }
+
+        .sabit-buton-sol:active {
+            transform: scale(0.95);
+        }
+
+        /* ===== ALT BİLGİ ALANI ===== */
+        .alt-bilgi {
+            text-align: center;
+            padding: 30px 20px;
+            color: #888;
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- FIXED ÖĞE 1: Sol üst - Ana Sayfaya Dön -->
+    <a href="index.html" class="sabit-buton-sol">Ana Sayfaya Dön</a>
+
+    <!-- FIXED ÖĞE 2: Sağ alt - Yardımcı Menü -->
+    <a href="#" class="sabit-buton-sag">Yardımcı Menü</a>
+
+    <!-- BAŞLIK -->
+    <div class="baslik-alani">
+        <h2>Marmara Üniversitesi – Bilgisayar Mühendisliği</h2>
+    </div>
+
+    <!-- ANA KART (position: relative kapsayıcı) -->
+    <div class="kart-kapsayici">
+
+        <!-- ABSOLUTE: Kategori Rozeti -->
+        <div class="kategori-rozeti">Ücretsiz</div>
+
+        <!-- ABSOLUTE: Tarih Etiketi -->
+        <div class="tarih-etiketi">10 Nisan</div>
+
+        <!-- Dekoratif Daireler (z-index: 1, içeriğin arkasında) -->
+        <div class="dekor-daire"></div>
+        <div class="dekor-daire-2"></div>
+
+        <!-- Kart İçerik -->
+        <h1 class="kart-baslik">Yazılım Kulübü Semineri</h1>
+        <p class="kart-aciklama">
+            Bu duyuru kartı, CSS position özelliklerini kullanarak
+            relative, absolute, fixed, z-index, hover ve animasyon
+            mantığını bir arada göstermek amacıyla hazırlanmıştır.
+        </p>
+
+        <!-- ABSOLUTE: Konum Kutusu -->
+        <div class="konum-kutusu">Konum: Mühendislik Fakültesi B207</div>
+
+        <!-- ABSOLUTE: Son Kayıt Butonu -->
+        <div class="kayit-butonu">Son Kayıt</div>
+
+    </div>
+
+    <!-- ALT BİLGİ -->
+    <div class="alt-bilgi">
+        <p>2026 – LAB Position Çalışması | Muhammed Emin Dinç</p>
+    </div>
+
+</body>
+
+</html>
