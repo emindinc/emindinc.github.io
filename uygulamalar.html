@@ -18,13 +18,6 @@
             padding: 30px 20px;
         }
 
-        h1 {
-            font-size: 22px;
-            font-weight: bold;
-            margin-bottom: 6px;
-            color: #1a1a2e;
-        }
-
         h2 {
             font-size: 18px;
             font-weight: bold;
@@ -99,8 +92,18 @@
 
         input:focus,
         select:focus {
-            border-color: #3B5BDB;
+            border-color: #bb7710;
             background: #fff;
+        }
+
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type="number"] {
+            -moz-appearance: textfield;
         }
 
         button {
@@ -108,7 +111,7 @@
             padding: 10px;
             font-size: 14px;
             font-weight: bold;
-            background-color: #3B5BDB;
+            background-color: #bb7710;
             color: white;
             border: none;
             border-radius: 6px;
@@ -117,7 +120,7 @@
         }
 
         button:hover {
-            background-color: #2f4ac4;
+            background-color: #8f5909;
         }
 
         .result-box {
@@ -215,14 +218,13 @@
         <a href="uygulamalar.html">Uygulamalar</a>
     </div>
 
-    <!-- UYGULAMA 1 -->
     <div class="section">
         <div class="section-title">Uygulama 1</div>
         <div class="card">
             <h2>Öğrenci Not Hesaplama</h2>
 
             <label>Ad Soyad</label>
-            <input type="text" id="adsoyad" placeholder="Örn: Filiz Akın" />
+            <input type="text" id="adsoyad" placeholder="Örn: Muhammed Emin Dinç" />
 
             <label>Vize Notu</label>
             <input type="number" id="vize" placeholder="0 – 100" min="0" max="100" />
@@ -241,71 +243,37 @@
         </div>
     </div>
 
-    <!-- UYGULAMA 2 -->
     <div class="section">
         <div class="section-title">Uygulama 2</div>
-        <div class="iki-kolon">
+        <div class="card">
+            <h2>Birim Dönüştürücü</h2>
 
-            <div class="card">
-                <h2>Birim Dönüştürücü</h2>
+            <label>Değer Giriniz</label>
+            <input type="number" id="deger1" placeholder="Örn: 50" />
 
-                <label>Değer Giriniz</label>
-                <input type="number" id="deger1" placeholder="Örn: 50" />
+            <label>Dönüşüm Tipi</label>
+            <select id="tip1">
+                <option value="c-f">Celsius → Fahrenheit</option>
+                <option value="f-c">Fahrenheit → Celsius</option>
+                <option value="c-k">Celsius → Kelvin</option>
+                <option value="k-c">Kelvin → Celsius</option>
+                <option value="m-km">Metre → Kilometre</option>
+                <option value="km-m">Kilometre → Metre</option>
+                <option value="m-mil">Metre → Mil</option>
+                <option value="kg-g">Kilogram → Gram</option>
+                <option value="g-kg">Gram → Kilogram</option>
+            </select>
 
-                <label>Dönüşüm Tipi</label>
-                <select id="tip1">
-                    <option value="c-f">Celsius → Fahrenheit</option>
-                    <option value="f-c">Fahrenheit → Celsius</option>
-                    <option value="c-k">Celsius → Kelvin</option>
-                    <option value="k-c">Kelvin → Celsius</option>
-                    <option value="m-km">Metre → Kilometre</option>
-                    <option value="km-m">Kilometre → Metre</option>
-                    <option value="m-mil">Metre → Mil</option>
-                    <option value="kg-g">Kilogram → Gram</option>
-                    <option value="g-kg">Gram → Kilogram</option>
-                </select>
+            <button onclick="hesaplaDonusum(1)">Hesapla</button>
 
-                <button onclick="hesaplaDonusum(1)">Hesapla</button>
-
-                <div class="sonuc-kutu" id="sonuc1">
-                    <small>Sonuç</small>
-                    <div class="deger" id="r-sonuc1"></div>
-                </div>
+            <div class="sonuc-kutu" id="sonuc1">
+                <small>Sonuç</small>
+                <div class="deger" id="r-sonuc1"></div>
             </div>
-
-            <div class="card">
-                <h2>Birim Dönüştürücü</h2>
-
-                <label>Değer Giriniz</label>
-                <input type="number" id="deger2" placeholder="Örn: 50" />
-
-                <label>Dönüşüm Tipi</label>
-                <select id="tip2">
-                    <option value="c-f">Celsius → Fahrenheit</option>
-                    <option value="f-c">Fahrenheit → Celsius</option>
-                    <option value="c-k">Celsius → Kelvin</option>
-                    <option value="k-c">Kelvin → Celsius</option>
-                    <option value="m-km">Metre → Kilometre</option>
-                    <option value="km-m">Kilometre → Metre</option>
-                    <option value="m-mil">Metre → Mil</option>
-                    <option value="kg-g">Kilogram → Gram</option>
-                    <option value="g-kg">Gram → Kilogram</option>
-                </select>
-
-                <button onclick="hesaplaDonusum(2)">Hesapla</button>
-
-                <div class="sonuc-kutu" id="sonuc2">
-                    <small>Sonuç</small>
-                    <div class="deger" id="r-sonuc2"></div>
-                </div>
-            </div>
-
         </div>
     </div>
 
     <script>
-        // --- UYGULAMA 1: Öğrenci Not Hesaplama ---
-
         function harfNotu(ort) {
             if (ort >= 90) return 'AA';
             if (ort >= 85) return 'BA';
@@ -342,8 +310,6 @@
 
             document.getElementById('ogrenci-sonuc').style.display = 'block';
         }
-
-        // --- UYGULAMA 2: Birim Dönüştürücü ---
 
         function donustur(val, tip) {
             switch (tip) {
