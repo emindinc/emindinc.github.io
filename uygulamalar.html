@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uygulamalar</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f8;
+            padding: 30px 20px;
+        }
+
+        h1 {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 6px;
+            color: #1a1a2e;
+        }
+
+        h2 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 14px;
+            color: #1a1a2e;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .ust-nav {
+            background-color: #e8edf5;
+            text-align: center;
+            padding: 12px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #3B5BDB;
+        }
+
+        .ust-nav a {
+            text-decoration: none;
+            color: black;
+            font-size: 15px;
+            margin-right: 18px;
+            font-weight: bold;
+        }
+
+        .ust-nav a:hover {
+            background-color: #d0d8ef;
+        }
+
+        .section-title {
+            font-size: 13px;
+            font-weight: bold;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 6px;
+            margin-bottom: 14px;
+        }
+
+        .card {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 480px;
+        }
+
+        label {
+            display: block;
+            font-size: 13px;
+            color: #555;
+            margin-bottom: 4px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 9px 12px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            background: #f9f9f9;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        input:focus,
+        select:focus {
+            border-color: #3B5BDB;
+            background: #fff;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            font-weight: bold;
+            background-color: #3B5BDB;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: #2f4ac4;
+        }
+
+        .result-box {
+            margin-top: 14px;
+            padding: 14px 16px;
+            background: #f1f3f5;
+            border-left: 3px solid #3B5BDB;
+            border-radius: 6px;
+            display: none;
+        }
+
+        .result-box .isim {
+            font-size: 15px;
+            font-weight: bold;
+            color: #1a1a1a;
+            margin-bottom: 6px;
+        }
+
+        .result-box .satir {
+            font-size: 13px;
+            color: #444;
+            margin-bottom: 4px;
+        }
+
+        .result-box .satir span {
+            font-weight: bold;
+            color: #1a1a1a;
+        }
+
+        .badge {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 2px 10px;
+            border-radius: 999px;
+        }
+
+        .gecti {
+            background: #d3f9d8;
+            color: #2f9e44;
+        }
+
+        .kaldi {
+            background: #ffe3e3;
+            color: #c92a2a;
+        }
+
+        .iki-kolon {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            max-width: 760px;
+        }
+
+        @media (max-width: 560px) {
+            .iki-kolon {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .sonuc-kutu {
+            display: none;
+            text-align: center;
+            margin-top: 14px;
+            padding: 12px;
+            background: #f1f3f5;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+        }
+
+        .sonuc-kutu small {
+            display: block;
+            font-size: 12px;
+            color: #888;
+            margin-bottom: 4px;
+        }
+
+        .sonuc-kutu .deger {
+            font-size: 22px;
+            font-weight: bold;
+            color: #1a1a1a;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="ust-nav">
+        <a href="index.html">Ana Sayfa</a>
+        <a href="about.html">Hakkımda</a>
+        <a href="interests.html">İlgi Alanlarım</a>
+        <a href="contact.html">İletişim</a>
+        <a href="flexbox.html">Flexbox</a>
+        <a href="lab-position.html">Lab Position</a>
+        <a href="uygulamalar.html">Uygulamalar</a>
+    </div>
+
+    <!-- UYGULAMA 1 -->
+    <div class="section">
+        <div class="section-title">Uygulama 1</div>
+        <div class="card">
+            <h2>Öğrenci Not Hesaplama</h2>
+
+            <label>Ad Soyad</label>
+            <input type="text" id="adsoyad" placeholder="Örn: Filiz Akın" />
+
+            <label>Vize Notu</label>
+            <input type="number" id="vize" placeholder="0 – 100" min="0" max="100" />
+
+            <label>Final Notu</label>
+            <input type="number" id="final" placeholder="0 – 100" min="0" max="100" />
+
+            <button onclick="hesaplaOgrenci()">Hesapla</button>
+
+            <div class="result-box" id="ogrenci-sonuc">
+                <div class="isim" id="r-isim"></div>
+                <div class="satir">Ortalama: <span id="r-ort"></span></div>
+                <div class="satir">Harf Notu: <span id="r-harf"></span></div>
+                <div class="satir">Durum: <span id="r-durum"></span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- UYGULAMA 2 -->
+    <div class="section">
+        <div class="section-title">Uygulama 2</div>
+        <div class="iki-kolon">
+
+            <div class="card">
+                <h2>Birim Dönüştürücü</h2>
+
+                <label>Değer Giriniz</label>
+                <input type="number" id="deger1" placeholder="Örn: 50" />
+
+                <label>Dönüşüm Tipi</label>
+                <select id="tip1">
+                    <option value="c-f">Celsius → Fahrenheit</option>
+                    <option value="f-c">Fahrenheit → Celsius</option>
+                    <option value="c-k">Celsius → Kelvin</option>
+                    <option value="k-c">Kelvin → Celsius</option>
+                    <option value="m-km">Metre → Kilometre</option>
+                    <option value="km-m">Kilometre → Metre</option>
+                    <option value="m-mil">Metre → Mil</option>
+                    <option value="kg-g">Kilogram → Gram</option>
+                    <option value="g-kg">Gram → Kilogram</option>
+                </select>
+
+                <button onclick="hesaplaDonusum(1)">Hesapla</button>
+
+                <div class="sonuc-kutu" id="sonuc1">
+                    <small>Sonuç</small>
+                    <div class="deger" id="r-sonuc1"></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Birim Dönüştürücü</h2>
+
+                <label>Değer Giriniz</label>
+                <input type="number" id="deger2" placeholder="Örn: 50" />
+
+                <label>Dönüşüm Tipi</label>
+                <select id="tip2">
+                    <option value="c-f">Celsius → Fahrenheit</option>
+                    <option value="f-c">Fahrenheit → Celsius</option>
+                    <option value="c-k">Celsius → Kelvin</option>
+                    <option value="k-c">Kelvin → Celsius</option>
+                    <option value="m-km">Metre → Kilometre</option>
+                    <option value="km-m">Kilometre → Metre</option>
+                    <option value="m-mil">Metre → Mil</option>
+                    <option value="kg-g">Kilogram → Gram</option>
+                    <option value="g-kg">Gram → Kilogram</option>
+                </select>
+
+                <button onclick="hesaplaDonusum(2)">Hesapla</button>
+
+                <div class="sonuc-kutu" id="sonuc2">
+                    <small>Sonuç</small>
+                    <div class="deger" id="r-sonuc2"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // --- UYGULAMA 1: Öğrenci Not Hesaplama ---
+
+        function harfNotu(ort) {
+            if (ort >= 90) return 'AA';
+            if (ort >= 85) return 'BA';
+            if (ort >= 80) return 'BB';
+            if (ort >= 75) return 'CB';
+            if (ort >= 70) return 'CC';
+            if (ort >= 65) return 'DC';
+            if (ort >= 60) return 'DD';
+            if (ort >= 50) return 'FD';
+            return 'FF';
+        }
+
+        function hesaplaOgrenci() {
+            var isim = document.getElementById('adsoyad').value.trim();
+            var vize = parseFloat(document.getElementById('vize').value);
+            var final = parseFloat(document.getElementById('final').value);
+
+            if (!isim || isNaN(vize) || isNaN(final)) {
+                alert('Lütfen tüm alanları doldurunuz!');
+                return;
+            }
+
+            var ortalama = vize * 0.4 + final * 0.6;
+            var harf = harfNotu(ortalama);
+            var gecti = ortalama >= 50;
+
+            document.getElementById('r-isim').textContent = isim;
+            document.getElementById('r-ort').textContent = ortalama.toFixed(2);
+            document.getElementById('r-harf').textContent = harf;
+
+            var durumEl = document.getElementById('r-durum');
+            durumEl.innerHTML = '<span class="badge ' + (gecti ? 'gecti' : 'kaldi') + '">'
+                + (gecti ? 'Geçti' : 'Kaldı') + '</span>';
+
+            document.getElementById('ogrenci-sonuc').style.display = 'block';
+        }
+
+        // --- UYGULAMA 2: Birim Dönüştürücü ---
+
+        function donustur(val, tip) {
+            switch (tip) {
+                case 'c-f': return val * 9 / 5 + 32;
+                case 'f-c': return (val - 32) * 5 / 9;
+                case 'c-k': return val + 273.15;
+                case 'k-c': return val - 273.15;
+                case 'm-km': return val / 1000;
+                case 'km-m': return val * 1000;
+                case 'm-mil': return val / 1609.34;
+                case 'kg-g': return val * 1000;
+                case 'g-kg': return val / 1000;
+                default: return val;
+            }
+        }
+
+        function hesaplaDonusum(n) {
+            var val = parseFloat(document.getElementById('deger' + n).value);
+            var tip = document.getElementById('tip' + n).value;
+
+            if (isNaN(val)) {
+                alert('Lütfen geçerli bir değer giriniz!');
+                return;
+            }
+
+            var sonuc = donustur(val, tip);
+            document.getElementById('r-sonuc' + n).textContent = parseFloat(sonuc.toFixed(4)).toLocaleString('tr-TR');
+            document.getElementById('sonuc' + n).style.display = 'block';
+        }
+    </script>
+
+</body>
+
+</html>
