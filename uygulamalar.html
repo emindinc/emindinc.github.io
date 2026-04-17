@@ -25,15 +25,11 @@
             color: #1a1a2e;
         }
 
-        .section {
-            margin-bottom: 40px;
-        }
-
         .ust-nav {
             background-color: #e8edf5;
             text-align: center;
             padding: 12px;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
             border-bottom: 2px solid #bb7710;
         }
 
@@ -49,15 +45,14 @@
             background-color: #d0d8ef;
         }
 
-        .section-title {
-            font-size: 13px;
-            font-weight: bold;
-            color: #666;
-            text-transform: uppercase;
-            letter-spacing: 0.06em;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 6px;
-            margin-bottom: 14px;
+        .iki-kolon {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            /* Kartların arasını açmak için boşluk artırıldı */
+            max-width: 1000px;
+            margin: 0 auto;
+            /* Sayfayı ortalamak için */
         }
 
         .card {
@@ -65,7 +60,7 @@
             border: 1px solid #e0e0e0;
             border-radius: 10px;
             padding: 20px;
-            max-width: 480px;
+            width: 100%;
         }
 
         label {
@@ -168,19 +163,6 @@
             color: #c92a2a;
         }
 
-        .iki-kolon {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-            max-width: 760px;
-        }
-
-        @media (max-width: 560px) {
-            .iki-kolon {
-                grid-template-columns: 1fr;
-            }
-        }
-
         .sonuc-kutu {
             display: none;
             text-align: center;
@@ -203,6 +185,12 @@
             font-weight: bold;
             color: #1a1a1a;
         }
+
+        @media (max-width: 768px) {
+            .iki-kolon {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 
@@ -218,8 +206,8 @@
         <a href="uygulamalar.html">Uygulamalar</a>
     </div>
 
-    <div class="section">
-        <div class="section-title">Uygulama 1</div>
+    <div class="iki-kolon">
+
         <div class="card">
             <h2>Öğrenci Not Hesaplama</h2>
 
@@ -241,10 +229,7 @@
                 <div class="satir">Durum: <span id="r-durum"></span></div>
             </div>
         </div>
-    </div>
 
-    <div class="section">
-        <div class="section-title">Uygulama 2</div>
         <div class="card">
             <h2>Birim Dönüştürücü</h2>
 
@@ -271,6 +256,7 @@
                 <div class="deger" id="r-sonuc1"></div>
             </div>
         </div>
+
     </div>
 
     <script>
