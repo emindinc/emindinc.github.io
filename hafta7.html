@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hafta 7 - Bootstrap + JavaScript</title>
+    <title>Hafta 7 - Airsoft Etkinlik Kayıt</title>
 
     <!-- Bootstrap CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -41,53 +41,53 @@
     <!-- Hero Bölümü -->
     <section class="hero-bolumu">
         <div class="container">
-            <span class="badge mb-3">Hafta 7 Laboratuvar</span>
-            <h1>Bootstrap + JavaScript ile<br>Etkinlik Kayıt Sayfası</h1>
-            <p class="mt-2 mb-0">Bu sayfada Bootstrap ile responsive bir arayüz tasarlandı, JavaScript ile tema
-                değiştirme<br>ve form verilerinden başvuru özeti oluşturma işlemleri yapıldı.</p>
+            <span class="badge mb-3">Airsoft Türkiye</span>
+            <h1>İstanbul Airsoft Bahar Operasyonu</h1>
+            <p class="mt-2 mb-0">2026 bahar sezonu açılış etkinliğine davetlisiniz! Takımınızı kurun, stratejinizi
+                belirleyin<br>ve sahada yerinizi alın. Kayıt için aşağıdaki formu doldurun.</p>
             <div class="mt-3">
-                <a href="#basvuru" class="btn btn-primary me-2">Başvuru Formuna Git</a>
+                <a href="#basvuru" class="btn btn-primary me-2">Hemen Kayıt Ol</a>
                 <button id="temaButonu" class="btn btn-outline-secondary">Koyu Temaya Geç</button>
             </div>
         </div>
     </section>
 
-    <!-- Atölye Kartları -->
+    <!-- Etkinlik Kartları -->
     <section id="atolye" class="container py-5">
-        <h2 class="atolye-baslik mb-1">Atölye İçerikleri</h2>
-        <p class="atolye-aciklama mb-4">Bootstrap bileşenlerini kullanarak hazırlanmış örnek kartlar.</p>
+        <h2 class="atolye-baslik mb-1">Operasyon Detayları</h2>
+        <p class="atolye-aciklama mb-4">Etkinliğimizde yer alan üç farklı senaryo hakkında bilgi alın.</p>
 
         <div class="row g-4">
             <div class="col-md-4">
                 <div class="card h-100">
                     <div class="card-body">
-                        <span class="badge bg-info text-dark mb-2">Layout</span>
-                        <h5 class="card-title">Responsive Tasarım</h5>
-                        <p class="card-text">Container, row, col yapıları ile farklı ekran boyutlarında uyumlu
-                            görünüm oluşturuldu.</p>
-                        <a href="#" class="btn btn-outline-dark btn-sm">Detay</a>
+                        <span class="badge bg-success mb-2">Senaryo 1</span>
+                        <h5 class="card-title">Bayrak Kapma</h5>
+                        <p class="card-text">İki takım karşı karşıya! Rakip takımın bayrağını ele geçirip kendi
+                            üssüne getiren takım kazanır. Süre: 30 dakika.</p>
+                        <a href="#basvuru" class="btn btn-outline-dark btn-sm">Katıl</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card h-100">
                     <div class="card-body">
-                        <span class="badge bg-success mb-2">Form</span>
-                        <h5 class="card-title">Form Yapıları</h5>
-                        <p class="card-text">Bootstrap form-control, form-select ve form-check sınıfları kullanıldı.
-                        </p>
-                        <a href="#basvuru" class="btn btn-outline-dark btn-sm">Detay</a>
+                        <span class="badge bg-warning text-dark mb-2">Senaryo 2</span>
+                        <h5 class="card-title">Bomba İmha</h5>
+                        <p class="card-text">Saldırı takımı bombayı yerleştirmeli, savunma takımı bunu engellemelidir.
+                            Taktik ve koordinasyon ön plana çıkar.</p>
+                        <a href="#basvuru" class="btn btn-outline-dark btn-sm">Katıl</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card h-100">
                     <div class="card-body">
-                        <span class="badge bg-danger mb-2">Script</span>
-                        <h5 class="card-title">JavaScript Etkileşimi</h5>
-                        <p class="card-text">Form gönderildiğinde özet kartı oluşturuluyor ve tema butonu ile sayfa
-                            görünümü değişiyor.</p>
-                        <a href="#sonuc" class="btn btn-outline-dark btn-sm">Detay</a>
+                        <span class="badge bg-danger mb-2">Senaryo 3</span>
+                        <h5 class="card-title">Son Adam</h5>
+                        <p class="card-text">Herkes herkese! Sahada ayakta kalan son oyuncu galip gelir. Bireysel
+                            yetenek ve refleks belirleyicidir.</p>
+                        <a href="#basvuru" class="btn btn-outline-dark btn-sm">Katıl</a>
                     </div>
                 </div>
             </div>
@@ -98,6 +98,7 @@
     <section class="bilgi-bolumu">
         <div class="container py-4">
             <div class="row g-4">
+                <!-- Etkinlik Bilgileri -->
                 <div class="col-md-6">
                     <div class="card h-100">
                         <div class="card-body">
@@ -105,24 +106,25 @@
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Tarih
-                                    <span class="badge bg-danger rounded-pill">24 Nisan</span>
+                                    <span class="badge bg-danger rounded-pill">10 Mayıs 2026</span>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Saat
-                                    <span class="badge bg-warning text-dark rounded-pill">11.00</span>
+                                    <span class="badge bg-warning text-dark rounded-pill">09.00 - 17.00</span>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    Yer
-                                    <span class="badge bg-info text-dark rounded-pill">Online</span>
+                                    Konum
+                                    <span class="badge bg-info text-dark rounded-pill">Beykoz Orman Sahası</span>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Kontenjan
-                                    <span class="badge bg-success rounded-pill">40 Kişi</span>
+                                    <span class="badge bg-success rounded-pill">60 Kişi</span>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
+                <!-- Neden Katılmalısınız -->
                 <div class="col-md-6">
                     <div class="card h-100">
                         <div class="card-body">
@@ -130,30 +132,30 @@
                             <div class="row g-3">
                                 <div class="col-6">
                                     <div class="p-3 bg-light">
-                                        <strong>Bootstrap pratiği</strong>
-                                        <p class="small text-muted mb-0">Hazır sınıflarla kısa sürede profesyonel
-                                            arayüz oluşturabilirsiniz.</p>
+                                        <strong>Takım ruhu</strong>
+                                        <p class="small text-muted mb-0">Arkadaşlarınızla birlikte strateji kurun
+                                            ve sahada koordineli hareket edin.</p>
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="p-3 bg-light">
-                                        <strong>JavaScript mantığı</strong>
-                                        <p class="small text-muted mb-0">DOM erişimi, event listener ve koşullu yapı
-                                            örneği uygulama.</p>
+                                        <strong>Adrenalin</strong>
+                                        <p class="small text-muted mb-0">Gerçekçi senaryolarla dolu aksiyonu
+                                            yaşayın. Reflekslerinizi test edin.</p>
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="p-3 bg-light">
-                                        <strong>Gerçek senaryo</strong>
-                                        <p class="small text-muted mb-0">Basit ama gerçekçi bir etkinlik kayıt sayfası
-                                            geliştirme.</p>
+                                        <strong>Doğa ile iç içe</strong>
+                                        <p class="small text-muted mb-0">Beykoz ormanlarında temiz hava ve doğal
+                                            arazide mücadele keyfi.</p>
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="p-3 bg-light">
-                                        <strong>GitHub Pages uyumu</strong>
-                                        <p class="small text-muted mb-0">Sayfa doğrudan mevcut ana sayfadan
-                                            erişilebilir halde tutuldu.</p>
+                                        <strong>Ekipman dahil</strong>
+                                        <p class="small text-muted mb-0">Tüfek, maske ve koruyucu ekipman
+                                            organizasyon tarafından sağlanır.</p>
                                     </div>
                                 </div>
                             </div>
@@ -171,11 +173,11 @@
                 <div class="col-lg-8 mx-auto">
                     <div class="d-flex justify-content-between align-items-center mb-3">
                         <div>
-                            <h2>Başvuru Formu</h2>
-                            <p class="text-muted mb-0">Formu doldurun, JavaScript otomatik olarak başvuru özetinizi
-                                oluşturur.</p>
+                            <h2>Etkinlik Kayıt Formu</h2>
+                            <p class="text-muted mb-0">Formu doldurun, başvuru özetiniz otomatik olarak oluşturulsun.
+                            </p>
                         </div>
-                        <span class="badge py-2 px-3">Bootstrap Form</span>
+                        <span class="badge py-2 px-3">Airsoft Kayıt</span>
                     </div>
 
                     <form id="basvuruFormu">
@@ -193,59 +195,58 @@
 
                         <div class="row mb-3">
                             <div class="col-md-6">
-                                <label for="bolum" class="form-label">Bölüm</label>
-                                <input type="text" class="form-control" id="bolum"
-                                    placeholder="Bilgisayar Mühendisliği">
+                                <label for="bolum" class="form-label">Takım Adı</label>
+                                <input type="text" class="form-control" id="bolum" placeholder="Örn: Shadow Wolves">
                             </div>
                             <div class="col-md-6">
-                                <label for="sinif" class="form-label">Sınıf</label>
+                                <label for="sinif" class="form-label">Deneyim Seviyesi</label>
                                 <select class="form-select" id="sinif">
                                     <option value="" disabled selected>Seçiniz</option>
-                                    <option value="1">1. Sınıf</option>
-                                    <option value="2">2. Sınıf</option>
-                                    <option value="3">3. Sınıf</option>
-                                    <option value="4">4. Sınıf</option>
+                                    <option value="1">Başlangıç</option>
+                                    <option value="2">Orta</option>
+                                    <option value="3">İleri</option>
+                                    <option value="4">Profesyonel</option>
                                 </select>
                             </div>
                         </div>
 
                         <div class="row mb-3">
                             <div class="col-md-6">
-                                <label for="oturum" class="form-label">Katılmak İstediğiniz Oturum</label>
+                                <label for="oturum" class="form-label">Katılmak İstediğiniz Senaryo</label>
                                 <select class="form-select" id="oturum">
                                     <option value="" disabled selected>Seçiniz</option>
-                                    <option value="bootstrap">Bootstrap Temelleri</option>
-                                    <option value="bootstrap-js">Bootstrap + JS Projesi</option>
-                                    <option value="responsive">Responsive Tasarım</option>
+                                    <option value="bayrak">Bayrak Kapma</option>
+                                    <option value="bomba">Bomba İmha</option>
+                                    <option value="sonadam">Son Adam</option>
                                 </select>
                             </div>
                             <div class="col-md-6">
-                                <label for="katilim" class="form-label">Katılım Türü</label>
+                                <label for="katilim" class="form-label">Ekipman Durumu</label>
                                 <select class="form-select" id="katilim">
                                     <option value="" disabled selected>Seçiniz</option>
-                                    <option value="yuzyuze">Yüz yüze</option>
-                                    <option value="online">Online</option>
+                                    <option value="kendi">Kendi ekipmanımı getireceğim</option>
+                                    <option value="kiralama">Kiralama istiyorum</option>
                                 </select>
                             </div>
                         </div>
 
                         <div class="mb-3">
-                            <label for="mesaj" class="form-label">Kısa Mesaj</label>
+                            <label for="mesaj" class="form-label">Not / Mesaj</label>
                             <textarea class="form-control" id="mesaj" rows="3"
-                                placeholder="Eklemek istediğiniz bir not varsa yazabilirsiniz."></textarea>
+                                placeholder="Takım arkadaşlarınızın isimleri, özel istekler vb."></textarea>
                         </div>
 
                         <div class="form-check mb-3">
                             <input class="form-check-input" type="checkbox" id="kvkk">
                             <label class="form-check-label" for="kvkk">
-                                Bilgilerimin sadece laboratuvar uygulaması amacıyla kullanılmasını kabul ediyorum.
+                                Etkinlik kurallarını okudum ve güvenlik talimatlarını kabul ediyorum.
                             </label>
                         </div>
 
                         <!-- Uyarı alanı -->
                         <div id="uyariAlani" class="alert alert-danger" style="display: none;"></div>
 
-                        <button type="submit" class="btn btn-primary me-2">Başvuru Özeti Oluştur</button>
+                        <button type="submit" class="btn btn-primary me-2">Kayıt Oluştur</button>
                         <button type="button" id="temizleButonu" class="btn btn-outline-secondary">Formu
                             Temizle</button>
                     </form>
@@ -256,11 +257,11 @@
 
     <!-- Sonuç Alanı -->
     <section id="sonuc" class="container py-5">
-        <h5 class="sonuc-baslik mb-3">Sonuç</h5>
+        <h5 class="sonuc-baslik mb-3">Kayıt Sonucu</h5>
         <div class="sonuc-alani">
             <div id="ozetIcerik" style="display: none;"></div>
-            <p id="bosUyari" class="text-muted text-center mb-0">Henüz başvuru özeti oluşturulmadı. Formu doldurduktan
-                sonra sonuç burada görünecek.</p>
+            <p id="bosUyari" class="text-muted text-center mb-0">Henüz kayıt oluşturulmadı. Formu doldurduktan
+                sonra kayıt özetiniz burada görünecek.</p>
         </div>
     </section>
 

@@ -13,7 +13,7 @@ temaButonu.addEventListener("click", function () {
     }
 });
 
-// 2) Form Submit - Başvuru Özeti Oluşturma
+// 2) Form Submit - Kayıt Özeti Oluşturma
 var basvuruFormu = document.getElementById("basvuruFormu");
 
 basvuruFormu.addEventListener("submit", function (e) {
@@ -22,15 +22,15 @@ basvuruFormu.addEventListener("submit", function (e) {
     // Form alanlarını al
     var ad = document.getElementById("adSoyad").value.trim();
     var eposta = document.getElementById("eposta").value.trim();
-    var bolum = document.getElementById("bolum").value.trim();
-    var sinif = document.getElementById("sinif").value;
-    var oturum = document.getElementById("oturum").value;
-    var katilim = document.getElementById("katilim").value;
+    var takim = document.getElementById("bolum").value.trim();
+    var seviye = document.getElementById("sinif").value;
+    var senaryo = document.getElementById("oturum").value;
+    var ekipman = document.getElementById("katilim").value;
     var mesaj = document.getElementById("mesaj").value.trim();
     var kvkk = document.getElementById("kvkk").checked;
 
     // Eksik alan kontrolü
-    if (!ad || !eposta || !bolum || !sinif || !oturum || !katilim) {
+    if (!ad || !eposta || !takim || !seviye || !senaryo || !ekipman) {
         var uyariAlani = document.getElementById("uyariAlani");
         uyariAlani.textContent = "Lütfen tüm zorunlu alanları doldurunuz!";
         uyariAlani.style.display = "block";
@@ -42,7 +42,7 @@ basvuruFormu.addEventListener("submit", function (e) {
 
     if (!kvkk) {
         var uyariAlani = document.getElementById("uyariAlani");
-        uyariAlani.textContent = "Lütfen KVKK onay kutucuğunu işaretleyiniz!";
+        uyariAlani.textContent = "Lütfen etkinlik kurallarını kabul ediniz!";
         uyariAlani.style.display = "block";
         document.getElementById("ozetIcerik").style.display = "none";
         return;
@@ -51,41 +51,44 @@ basvuruFormu.addEventListener("submit", function (e) {
     // Uyarıyı gizle
     document.getElementById("uyariAlani").style.display = "none";
 
-    // Sınıf metnini al
-    var sinifSelect = document.getElementById("sinif");
-    var sinifMetni = sinifSelect.options[sinifSelect.selectedIndex].text;
+    // Seviye metnini al
+    var seviyeSelect = document.getElementById("sinif");
+    var seviyeMetni = seviyeSelect.options[seviyeSelect.selectedIndex].text;
 
-    // Oturum metnini al
-    var oturumSelect = document.getElementById("oturum");
-    var oturumMetni = oturumSelect.options[oturumSelect.selectedIndex].text;
+    // Senaryo metnini al
+    var senaryoSelect = document.getElementById("oturum");
+    var senaryoMetni = senaryoSelect.options[senaryoSelect.selectedIndex].text;
 
-    // Katılım metnini al
-    var katilimSelect = document.getElementById("katilim");
-    var katilimMetni = katilimSelect.options[katilimSelect.selectedIndex].text;
+    // Ekipman metnini al
+    var ekipmanSelect = document.getElementById("katilim");
+    var ekipmanMetni = ekipmanSelect.options[ekipmanSelect.selectedIndex].text;
 
     // Özet kartını oluştur
     var ozetHTML = "";
     ozetHTML += '<div class="ozet-kart">';
-    ozetHTML += '<h5 style="margin-bottom: 15px; color: #336699;">Başvuru Özeti</h5>';
+    ozetHTML += '<h5 style="margin-bottom: 15px; color: #8B4513;">Kayıt Özeti</h5>';
     ozetHTML += '<p><strong>Ad Soyad:</strong> ' + ad + '</p>';
     ozetHTML += '<p><strong>E-posta:</strong> ' + eposta + '</p>';
-    ozetHTML += '<p><strong>Bölüm:</strong> ' + bolum + '</p>';
-    ozetHTML += '<p><strong>Sınıf:</strong> ' + sinifMetni + '</p>';
-    ozetHTML += '<p><strong>Oturum:</strong> ' + oturumMetni + '</p>';
-    ozetHTML += '<p><strong>Katılım Türü:</strong> ' + katilimMetni + '</p>';
+    ozetHTML += '<p><strong>Takım:</strong> ' + takim + '</p>';
+    ozetHTML += '<p><strong>Deneyim:</strong> ' + seviyeMetni + '</p>';
+    ozetHTML += '<p><strong>Senaryo:</strong> ' + senaryoMetni + '</p>';
+    ozetHTML += '<p><strong>Ekipman:</strong> ' + ekipmanMetni + '</p>';
 
     if (mesaj) {
-        ozetHTML += '<p><strong>Mesaj:</strong> ' + mesaj + '</p>';
+        ozetHTML += '<p><strong>Not:</strong> ' + mesaj + '</p>';
     }
 
     ozetHTML += '<hr>';
-    ozetHTML += '<small style="color: #888;">Başvurunuz başarıyla oluşturuldu.</small>';
+    ozetHTML += '<small style="color: #888;">Kaydınız başarıyla oluşturuldu. Etkinlik günü görüşmek üzere!</small>';
     ozetHTML += '</div>';
 
     // Sonuç alanına yaz
     var ozetIcerik = document.getElementById("ozetIcerik");
     ozetIcerik.innerHTML = ozetHTML;
     ozetIcerik.style.display = "block";
+
+    // Boş uyarıyı gizle
+    document.getElementById("bosUyari").style.display = "none";
 
     // Sonuç alanına kaydır
     ozetIcerik.scrollIntoView({ behavior: "smooth" });
@@ -98,4 +101,5 @@ temizleButonu.addEventListener("click", function () {
     basvuruFormu.reset();
     document.getElementById("uyariAlani").style.display = "none";
     document.getElementById("ozetIcerik").style.display = "none";
+    document.getElementById("bosUyari").style.display = "block";
 });
