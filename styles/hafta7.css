@@ -1,0 +1,129 @@
+/* Hafta 7 - Ek Stiller */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Koyu tema */
+body.dark-theme {
+    background-color: #1a1a2e !important;
+    color: #e0e0e0 !important;
+}
+
+body.dark-theme .navbar {
+    background-color: #16213e !important;
+}
+
+body.dark-theme .navbar .navbar-brand,
+body.dark-theme .navbar .nav-link {
+    color: #e0e0e0 !important;
+}
+
+body.dark-theme .hero-bolumu {
+    background-color: #16213e !important;
+    color: #e0e0e0 !important;
+}
+
+body.dark-theme .hero-bolumu p {
+    color: #b0b0b0 !important;
+}
+
+body.dark-theme .card {
+    background-color: #1f2b47 !important;
+    border-color: #2a3a5c !important;
+    color: #e0e0e0 !important;
+}
+
+body.dark-theme .card .card-title {
+    color: #e0e0e0 !important;
+}
+
+body.dark-theme .card .card-text {
+    color: #b0b0b0 !important;
+}
+
+body.dark-theme .bilgi-bolumu {
+    background-color: #16213e !important;
+}
+
+body.dark-theme .bilgi-bolumu .list-group-item {
+    background-color: #1f2b47 !important;
+    color: #e0e0e0 !important;
+    border-color: #2a3a5c !important;
+}
+
+body.dark-theme .form-bolumu {
+    background-color: #0f1626 !important;
+}
+
+body.dark-theme .form-control,
+body.dark-theme .form-select {
+    background-color: #1f2b47 !important;
+    color: #e0e0e0 !important;
+    border-color: #2a3a5c !important;
+}
+
+body.dark-theme .form-check-label {
+    color: #e0e0e0 !important;
+}
+
+body.dark-theme .sonuc-alani {
+    background-color: #1f2b47 !important;
+    border-color: #2a3a5c !important;
+    color: #e0e0e0 !important;
+}
+
+body.dark-theme footer {
+    background-color: #0f1626 !important;
+}
+
+/* Hero bölümü */
+.hero-bolumu {
+    background-color: #f0f4f8;
+    padding: 50px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.hero-bolumu h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #1a1a2e;
+}
+
+.hero-bolumu p {
+    color: #666;
+    font-size: 15px;
+}
+
+/* Bilgi bölümü */
+.bilgi-bolumu {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+}
+
+/* Form bölümü */
+.form-bolumu {
+    padding: 40px 0;
+}
+
+.form-bolumu h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+/* Sonuç alanı */
+.sonuc-alani {
+    margin-top: 25px;
+    padding: 20px;
+    background-color: #f0f4f8;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.sonuc-alani .ozet-kart {
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 20px;
+}
