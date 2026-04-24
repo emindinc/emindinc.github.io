@@ -2,36 +2,43 @@
 
 body {
     font-family: Arial, sans-serif;
+    background-color: #eae6df;
 }
 
 /* Koyu tema */
 body.dark-theme {
-    background-color: #1a1a2e !important;
-    color: #e0e0e0 !important;
+    background-color: #1b1b1b !important;
+    color: #d4d4d4 !important;
 }
 
 body.dark-theme .navbar {
-    background-color: #16213e !important;
+    background-color: #111 !important;
+    border-bottom-color: #444 !important;
 }
 
 body.dark-theme .navbar .navbar-brand,
 body.dark-theme .navbar .nav-link {
-    color: #e0e0e0 !important;
+    color: #ccc !important;
 }
 
 body.dark-theme .hero-bolumu {
-    background-color: #16213e !important;
+    background-color: #222 !important;
+    border-bottom-color: #444 !important;
+    color: #d4d4d4 !important;
+}
+
+body.dark-theme .hero-bolumu h1 {
     color: #e0e0e0 !important;
 }
 
 body.dark-theme .hero-bolumu p {
-    color: #b0b0b0 !important;
+    color: #999 !important;
 }
 
 body.dark-theme .card {
-    background-color: #1f2b47 !important;
-    border-color: #2a3a5c !important;
-    color: #e0e0e0 !important;
+    background-color: #2a2a2a !important;
+    border-color: #444 !important;
+    color: #d4d4d4 !important;
 }
 
 body.dark-theme .card .card-title {
@@ -39,91 +46,250 @@ body.dark-theme .card .card-title {
 }
 
 body.dark-theme .card .card-text {
-    color: #b0b0b0 !important;
+    color: #aaa !important;
 }
 
 body.dark-theme .bilgi-bolumu {
-    background-color: #16213e !important;
+    background-color: #1e1e1e !important;
 }
 
 body.dark-theme .bilgi-bolumu .list-group-item {
-    background-color: #1f2b47 !important;
+    background-color: #2a2a2a !important;
+    color: #d4d4d4 !important;
+    border-color: #444 !important;
+}
+
+body.dark-theme .bilgi-bolumu .bg-light {
+    background-color: #333 !important;
+}
+
+body.dark-theme .bilgi-bolumu .bg-light strong {
     color: #e0e0e0 !important;
-    border-color: #2a3a5c !important;
+}
+
+body.dark-theme .bilgi-bolumu .bg-light .text-muted {
+    color: #999 !important;
 }
 
 body.dark-theme .form-bolumu {
-    background-color: #0f1626 !important;
+    background-color: #1b1b1b !important;
+}
+
+body.dark-theme .form-bolumu h2 {
+    color: #e0e0e0 !important;
 }
 
 body.dark-theme .form-control,
 body.dark-theme .form-select {
-    background-color: #1f2b47 !important;
-    color: #e0e0e0 !important;
-    border-color: #2a3a5c !important;
+    background-color: #2a2a2a !important;
+    color: #d4d4d4 !important;
+    border-color: #555 !important;
+}
+
+body.dark-theme .form-label {
+    color: #ccc !important;
 }
 
 body.dark-theme .form-check-label {
-    color: #e0e0e0 !important;
+    color: #ccc !important;
 }
 
 body.dark-theme .sonuc-alani {
-    background-color: #1f2b47 !important;
-    border-color: #2a3a5c !important;
-    color: #e0e0e0 !important;
+    background-color: #2a2a2a !important;
+    border-color: #444 !important;
+    color: #d4d4d4 !important;
+}
+
+body.dark-theme .sonuc-alani .text-muted {
+    color: #888 !important;
 }
 
 body.dark-theme footer {
-    background-color: #0f1626 !important;
+    background-color: #111 !important;
+    border-top-color: #444 !important;
 }
 
-/* Hero bölümü */
+body.dark-theme .atolye-baslik,
+body.dark-theme .sonuc-baslik {
+    color: #e0e0e0 !important;
+}
+
+body.dark-theme .atolye-aciklama {
+    color: #999 !important;
+}
+
+/* ========================================= */
+/* Navbar                                     */
+/* ========================================= */
+.navbar {
+    border-bottom: 3px solid #8B4513;
+}
+
+/* ========================================= */
+/* Hero bölümü                               */
+/* ========================================= */
 .hero-bolumu {
-    background-color: #f0f4f8;
-    padding: 50px 0;
-    border-bottom: 1px solid #ddd;
+    background-color: #ddd5c8;
+    padding: 45px 0;
+    border-bottom: 3px solid #8B4513;
 }
 
 .hero-bolumu h1 {
-    font-size: 28px;
+    font-size: 26px;
     font-weight: bold;
-    color: #1a1a2e;
+    color: #3a2a1a;
 }
 
 .hero-bolumu p {
-    color: #666;
-    font-size: 15px;
+    color: #6b5b4b;
+    font-size: 14px;
 }
 
-/* Bilgi bölümü */
+.hero-bolumu .badge {
+    background-color: #8B4513 !important;
+    font-size: 12px;
+}
+
+.hero-bolumu .btn-primary {
+    background-color: #8B4513;
+    border-color: #8B4513;
+}
+
+.hero-bolumu .btn-primary:hover {
+    background-color: #6d350f;
+    border-color: #6d350f;
+}
+
+.hero-bolumu .btn-outline-secondary {
+    color: #555;
+    border-color: #999;
+}
+
+.hero-bolumu .btn-outline-secondary:hover {
+    background-color: #555;
+    color: #fff;
+    border-color: #555;
+}
+
+/* ========================================= */
+/* Kartlar                                    */
+/* ========================================= */
+
+.atolye-baslik {
+    color: #3a2a1a;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.atolye-aciklama {
+    color: #7a6a5a;
+}
+
+.card {
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
+.card .badge {
+    font-size: 11px;
+}
+
+.card .btn-outline-dark {
+    border-color: #8B4513;
+    color: #8B4513;
+    font-size: 13px;
+}
+
+.card .btn-outline-dark:hover {
+    background-color: #8B4513;
+    color: #fff;
+}
+
+/* ========================================= */
+/* Bilgi bölümü                              */
+/* ========================================= */
 .bilgi-bolumu {
-    background-color: #f8f9fa;
+    background-color: #d8d0c4;
     padding: 40px 0;
+    border-top: 3px solid #8B4513;
+    border-bottom: 3px solid #8B4513;
 }
 
-/* Form bölümü */
+.bilgi-bolumu .card {
+    border-color: #b5a593;
+}
+
+.bilgi-bolumu .list-group-item {
+    border-color: #d0c4b4;
+}
+
+.bilgi-bolumu .bg-light {
+    background-color: #f0ebe3 !important;
+    border: 1px solid #d0c4b4;
+    border-radius: 4px !important;
+}
+
+/* ========================================= */
+/* Form bölümü                               */
+/* ========================================= */
 .form-bolumu {
     padding: 40px 0;
 }
 
 .form-bolumu h2 {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
-    margin-bottom: 6px;
+    color: #3a2a1a;
+    margin-bottom: 4px;
 }
 
-/* Sonuç alanı */
+.form-bolumu .badge {
+    background-color: #555 !important;
+}
+
+.form-bolumu .btn-primary {
+    background-color: #8B4513;
+    border-color: #8B4513;
+}
+
+.form-bolumu .btn-primary:hover {
+    background-color: #6d350f;
+    border-color: #6d350f;
+}
+
+.form-bolumu .form-control:focus,
+.form-bolumu .form-select:focus {
+    border-color: #8B4513;
+    box-shadow: 0 0 0 2px rgba(139, 69, 19, 0.15);
+}
+
+/* ========================================= */
+/* Sonuç alanı                               */
+/* ========================================= */
+.sonuc-baslik {
+    color: #3a2a1a;
+    font-size: 20px;
+    font-weight: bold;
+}
+
 .sonuc-alani {
-    margin-top: 25px;
+    margin-top: 15px;
     padding: 20px;
-    background-color: #f0f4f8;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    background-color: #f0ebe3;
+    border: 2px solid #ccc;
+    border-radius: 4px;
 }
 
 .sonuc-alani .ozet-kart {
     background-color: #fff;
-    border: 1px solid #dee2e6;
-    border-radius: 8px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
     padding: 20px;
+}
+
+/* ========================================= */
+/* Footer                                     */
+/* ========================================= */
+footer {
+    border-top: 3px solid #8B4513;
 }
