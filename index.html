@@ -11,6 +11,7 @@
             margin: 0;
         }
 
+        /* sayfa ortada duruyor, genişlik sabit 800px */
         .sayfa-kutusu {
             width: 800px;
             margin: 25px auto;
@@ -18,6 +19,7 @@
             border: 2px solid #444;
         }
 
+        /* menü mavi renk */
         .ust-menu {
             background-color: #b0d4f1;
             text-align: center;
@@ -55,6 +57,7 @@
             padding: 20px;
         }
 
+        /* başlıkların altına kesikli çizgi koydum */
         .icerik h2 {
             color: #336699;
             border-bottom: 1px dashed #aaa;
@@ -70,6 +73,24 @@
             margin-bottom: 5px;
         }
 
+        /* hafta 7 butonu */
+        .hafta7-buton {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 24px;
+            background-color: #336699;
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        .hafta7-buton:hover {
+            background-color: #264d73;
+        }
+
+        /* alt footer kısmı */
         .alt-kisim {
             background-color: #444;
             color: white;
@@ -84,6 +105,7 @@
 
     <div class="sayfa-kutusu">
 
+        <!-- üst menü -->
         <div class="ust-menu">
             <a href="index.html">Ana Sayfa</a>
             <a href="about.html">Hakkımda</a>
@@ -95,6 +117,7 @@
             <a href="hafta7.html">Hafta 7</a>
         </div>
 
+        <!-- başlık alanı -->
         <div class="baslik">
             <h1>Muhammed Emin Dinç</h1>
             <p>Bilgisayar Mühendisliği | Web Programlama Öğrencisi</p>
@@ -120,6 +143,9 @@
                 <li>JavaScript ile etkileşim eklemek</li>
                 <li>ASP.NET Core ile dinamik site geliştirmek</li>
             </ol>
+
+            <!-- hafta 7 butonu -->
+            <a href="hafta7.html" class="hafta7-buton">Hafta 7 Uygulamasına Git</a>
         </div>
 
         <div class="alt-kisim">

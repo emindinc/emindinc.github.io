@@ -1,11 +1,11 @@
-/* Hafta 7 - Ek Stiller */
+/*-- hafta7 ek stiller --*/
 
 body {
     font-family: Arial, sans-serif;
     background-color: #eae6df;
 }
 
-/* Koyu tema */
+/*-- koyu tema --*/
 body.dark-theme {
     background-color: #1b1b1b !important;
     color: #d4d4d4 !important;
@@ -118,16 +118,11 @@ body.dark-theme .atolye-aciklama {
     color: #999 !important;
 }
 
-/* ========================================= */
-/* Navbar                                     */
-/* ========================================= */
 .navbar {
     border-bottom: 3px solid #8B4513;
 }
 
-/* ========================================= */
-/* Hero bölümü                               */
-/* ========================================= */
+/* hero bölümü */
 .hero-bolumu {
     background-color: #ddd5c8;
     padding: 45px 0;
@@ -171,10 +166,6 @@ body.dark-theme .atolye-aciklama {
     border-color: #555;
 }
 
-/* ========================================= */
-/* Kartlar                                    */
-/* ========================================= */
-
 .atolye-baslik {
     color: #3a2a1a;
     font-size: 22px;
@@ -205,9 +196,6 @@ body.dark-theme .atolye-aciklama {
     color: #fff;
 }
 
-/* ========================================= */
-/* Bilgi bölümü                              */
-/* ========================================= */
 .bilgi-bolumu {
     background-color: #d8d0c4;
     padding: 40px 0;
@@ -229,9 +217,7 @@ body.dark-theme .atolye-aciklama {
     border-radius: 4px !important;
 }
 
-/* ========================================= */
-/* Form bölümü                               */
-/* ========================================= */
+/* form bölümü */
 .form-bolumu {
     padding: 40px 0;
 }
@@ -263,15 +249,13 @@ body.dark-theme .atolye-aciklama {
     box-shadow: 0 0 0 2px rgba(139, 69, 19, 0.15);
 }
 
-/* ========================================= */
-/* Sonuç alanı                               */
-/* ========================================= */
 .sonuc-baslik {
     color: #3a2a1a;
     font-size: 20px;
     font-weight: bold;
 }
 
+/* kayıt sonucu kutusu */
 .sonuc-alani {
     margin-top: 15px;
     padding: 20px;
@@ -287,9 +271,6 @@ body.dark-theme .atolye-aciklama {
     padding: 20px;
 }
 
-/* ========================================= */
-/* Footer                                     */
-/* ========================================= */
 footer {
     border-top: 3px solid #8B4513;
 }

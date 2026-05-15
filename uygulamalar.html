@@ -49,12 +49,11 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 40px;
-            /* Kartların arasını açmak için boşluk artırıldı */
             max-width: 1000px;
             margin: 0 auto;
-            /* Sayfayı ortalamak için */
         }
 
+        /* beyaz kart */
         .card {
             background: #ffffff;
             border: 1px solid #e0e0e0;
@@ -85,6 +84,7 @@
             transition: border-color 0.2s;
         }
 
+        /* focus olunca renk değişiyor */
         input:focus,
         select:focus {
             border-color: #bb7710;
@@ -261,6 +261,7 @@
     </div>
 
     <script>
+        // ortalamaya göre harf notu döndürüyor
         function harfNotu(ort) {
             if (ort >= 90) return 'AA';
             if (ort >= 85) return 'BA';
@@ -273,6 +274,7 @@
             return 'FF';
         }
 
+        // formdaki değerleri alıp sonucu gösteriyor
         function hesaplaOgrenci() {
             var isim = document.getElementById('adsoyad').value.trim();
             var vize = parseFloat(document.getElementById('vize').value);
@@ -283,6 +285,7 @@
                 return;
             }
 
+            // vize %40, final %60 ağırlıklı
             var ortalama = vize * 0.4 + final * 0.6;
             var harf = harfNotu(ortalama);
             var gecti = ortalama >= 50;
@@ -298,6 +301,7 @@
             document.getElementById('ogrenci-sonuc').style.display = 'block';
         }
 
+        // birim dönüştürme hesaplamaları
         function donustur(val, tip) {
             switch (tip) {
                 case 'c-f': return val * 9 / 5 + 32;
@@ -323,6 +327,7 @@
             }
 
             var sonuc = donustur(val, tip);
+            // sonucu Türkçe formatında göster
             document.getElementById('r-sonuc' + n).textContent = parseFloat(sonuc.toFixed(4)).toLocaleString('tr-TR');
             document.getElementById('sonuc' + n).style.display = 'block';
         }
